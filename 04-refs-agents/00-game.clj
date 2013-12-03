@@ -12,8 +12,8 @@
   [loot-fn scenario]
   (let [hoard (set (range 100))
         smaug (character "Smaug" :health 500 :strength 400 :items hoard)
-        gandalf (character "Bilbo" :health 100 :strength 100)
-        bilbo (character "Gandalf" :health 75 :mana 750)]
+        bilbo (character "Bilbo" :health 100 :strength 100)
+        gandalf (character "Gandalf" :health 75 :mana 750)]
     (dofutures 2
                #(while (loot-fn smaug bilbo))
                #(while (loot-fn smaug gandalf)))
