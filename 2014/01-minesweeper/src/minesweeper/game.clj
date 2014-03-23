@@ -7,8 +7,8 @@
   (let [board (->> "_"
                 (repeat h) (vec)
                 (repeat w) (vec))
-        mines (->> (for [i (range) :while (< i w)
-                         j (range) :while (< j h)]
+        mines (->> (for [i (range w)
+                         j (range h)]
                      [i j])
                    (shuffle)
                    (take n)
